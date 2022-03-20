@@ -4,6 +4,8 @@ An integer is a palindrome when it reads the same backward as forward.
 For example, 121 is a palindrome while 123 is not.
 Be careful about the negative numbers.
 I didn't use reverse string in the solution.
+
+https://leetcode.com/problems/palindrome-number/
 """
 class Solution(object):
     def isPalindrome(self, num):

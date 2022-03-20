@@ -1,0 +1,30 @@
+"""
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+
+https://leetcode.com/problems/valid-parentheses/
+"""
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        ch = ""
+        leftPar = ['(', '{', '[']
+        rightPar = [')', '}', ']']
+        for i, c in enumerate(s):
+            if c in leftPar or (c in rightPar and len(ch)==0):
+                ch+=c
+            elif c in rightPar:
+                if ch[-1]==leftPar[rightPar.index(c)]:
+                    ch = ch[:-1]
+                else:
+                    ch+=c
+        if ch=="":
+            return True
+        else:
+            return False

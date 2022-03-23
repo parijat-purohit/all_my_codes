@@ -22,7 +22,7 @@ class TreeNode(object):
         if self.left:
             self.left.preorder()
         if self.right:
-            self.right.preorder()
+           self.right.preorder()
 
     def inorder(self):
         if self.left:

@@ -6,7 +6,7 @@ class TreeNode(object):
 
     def insert(self, num):
         if self.val == 0:
-            return self.val = num
+            self.val = num
         if num < self.val:
             if self.left:
                 return self.left.insert(num)

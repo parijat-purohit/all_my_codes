@@ -1,11 +1,6 @@
 
-from collections import defaultdict,OrderedDict
-from queue import PriorityQueue
-"""
-This code will help us to utilize a default dict to take input a graph's node and store.
-Note that it will be only useful for an unweighted graph which means we assume each edge
-has a weight 1.
-"""
+from collections import defaultdict
+
 class Graph(object):
     def __init__(self):
         self.g = defaultdict(list)
